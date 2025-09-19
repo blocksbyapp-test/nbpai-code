@@ -1,0 +1,15 @@
+overwrite: true
+schema:
+  - http://127.0.0.1:3000/my-feature/api
+documents:
+  - 'src/features/*/graphql/**/*.{ts,tsx,graphql}'
+generates:
+  src/generated/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withHOC: false
+
